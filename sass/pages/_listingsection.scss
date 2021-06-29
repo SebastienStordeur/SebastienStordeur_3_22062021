@@ -1,0 +1,105 @@
+@import "../utils/variables";
+
+.listing-section {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+        &__card {
+            display: flex;
+            flex-direction: column;   
+            margin-bottom: 2rem;         
+            border-radius: 1rem;
+            box-shadow: 3px 3px 15px 2px #d9d9d9;
+            cursor: pointer;
+            overflow: hidden;
+                &--img-wrapper {
+                    position: relative;
+                    height: 12rem;
+                        img {
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        .new-card {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 5rem;
+                            height: 2rem;
+                            position: absolute;
+                            margin-top: 1rem;
+                            margin-left: 75%;
+                            z-index: 1;
+                            color: #008766;
+                            background-color: $tertiary-color;
+                            font-family: "Roboto", sans-serif;
+                            font-weight: 500;                           
+                    }
+                }
+                &--information-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 5rem;
+                    padding-left: 1rem;
+                    padding-right: 2rem;
+                        .text-wrapper {
+                            line-height: 4px;
+                        }                       
+                        .heart-wrapper:hover {                            
+                            .far {
+                                background-image: linear-gradient(to top, $secondary-color, $primary-color);
+                            }
+                        }                       
+                }                    
+        }
+}
+
+@media (min-width: 1440px) {
+    .listing-section {
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+@media (min-width: 1100px) {
+    .listing-section {
+        &__card-container {
+            display: grid;
+            margin-top: 1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 17rem;
+            grid-gap: 2rem;
+            row-gap: 2rem;
+        }
+        &__title {
+            margin-top: 3rem;
+        }
+        &__card {
+            .new-card {
+                margin-left: 80%;
+            }
+        }
+    }
+}
+@media (min-width: 800px) {
+    .listing-section {
+        &__title {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+@media (min-width: 800px) and (max-width: 1099px) {
+    .listing-section {
+        &__card {
+            .new-card {
+                margin-left: 85%;
+            }
+        }
+    }
+}

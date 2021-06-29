@@ -1,0 +1,79 @@
+@import "../utils/variables";
+
+.working-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+        &__title {
+            margin-top: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        &__step-container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__step {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #F6F6F6;
+            height: 4rem;
+            margin: 1rem;
+            border-radius: 1rem;
+            font-family: "Roboto", sans-serif;
+            box-shadow: 3px 3px 15px 2px #d9d9d9;     
+                .number-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    margin-right: 20.5rem;
+                    width: 1.5rem;
+                    height: 1.5rem;               
+                    color: #fff;
+                    background-color: $primary-color;                   
+                    border-radius: 1rem;
+                   
+                    
+                }
+                .fas {
+                    margin-right: 14rem;
+                    color: #7E7E7E;
+                }
+                .action {
+                    position: absolute;
+                    font-weight: 500;
+                }
+        }
+        &__step:hover {
+            background-color: #F5EDFF;
+            cursor: pointer;
+                .fas {
+                    color: $primary-color;
+                }
+        }
+}
+
+@media (min-width: 1440px) {
+    .working-section {
+        width: 1440px;
+        margin: auto;
+    }
+}
+@media (min-width: 800px) {
+    .working-section {
+        &__title {
+            display: flex;
+            justify-content: center;
+        }
+        &__step-container {
+            flex-direction: row;
+            justify-content: center;            
+        }
+        &__step {
+            width: 30rem;
+            margin-top: 1.5rem;
+        }
+    }
+}

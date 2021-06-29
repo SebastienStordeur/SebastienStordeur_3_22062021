@@ -1,0 +1,41 @@
+@import "../utils/variables";
+
+.explore-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 3rem;
+    
+        &__location-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #4b4b4b;
+            background-color: $location-wrapper-bg-color;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            box-shadow: inset 0px 11px 8px -10px #CECECE;
+                .fa-map-marker-alt {
+                    position: absolute;
+                    margin-right: 10rem;
+                }
+        }
+        &__discover-restaurant {
+            padding-top: 2.5rem;
+            background-color: #F6F6F6;
+            font-family: "Roboto", sans-serif;
+                .discover-title {
+                    margin: 0 2.5rem;
+                    font-weight: bold;
+                }
+                .discover-description {
+                    color: #4D4D4D;
+                    font-size: 18px;
+                }
+                .btn-box {
+                    display: flex;
+                    justify-content: center;
+                }
+        }
+}

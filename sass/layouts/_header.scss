@@ -1,0 +1,24 @@
+.header {
+    padding: 1rem 0 0.5rem 0;
+        &__logo-wrapper {
+            text-align: center;
+        }
+        i {
+            position: absolute;
+            color: #353535;
+            margin-top: 0.5rem;
+            margin-left: 5%;
+        }
+}
+@media (min-width: 1440px) {
+    .header {
+        width: 1440px;
+        margin: auto;
+            i {
+                margin-left: 2%;
+            }
+    }
+}
+.logo {
+    width: 10rem;
+}

@@ -1,0 +1,52 @@
+@import "../utils/variables";
+
+.footer {
+    display: flex;
+    color: #fff;
+    background-color: $footer-background-color;
+    line-height: 1.7rem;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 0.5rem;
+    &__title {
+        margin-left: 2rem;
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: -0.5rem;
+        &--text1 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &--text2 {
+            font-weight: 300;
+        }
+    }
+        .fa-utensils, .fa-hands-helping {
+            margin-right: 0.5rem;
+            font-size: 0.7rem;
+        }        
+        .fa-utensils {
+            margin-right: 1.05rem;
+        }
+}
+li {
+    list-style: none;
+}
+@media (max-width: 1099px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+@media (min-width: 1100px) {
+    .footer {
+        justify-content: center;
+            &__list {
+                margin-top: 0.7rem;
+            }
+    }
+}

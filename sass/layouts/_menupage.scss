@@ -1,0 +1,271 @@
+@import "../utils/variables";
+
+.banner {
+        &__img-wrapper {
+            position: relative;
+            height: 16rem;
+            overflow: hidden;
+                img  {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+        }
+}
+@media (min-width: 1440px) {
+    .banner {
+        width: 1440px;
+        margin: auto;
+    }
+}
+.food-menu-section {
+    position: relative;
+    background-color: #F6F6F6;
+    padding: 0 1.5rem;
+    margin-top: -2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+        &__title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+                h1 {
+                    font-family: "Shrikhand", sans-serif;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                }
+                i {
+                    margin-top: 2.3rem;
+                }
+        }
+.food-menu {
+    &__title {
+        margin-top: 2rem;
+        font-family: "Roboto", sans-serif;
+        &:after {
+            position: absolute;
+            content: '';
+            height: 0.2rem;
+            margin-top: -0.7rem;
+            width: 3rem;
+            background-color: $tertiary-color;
+        }
+            h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 18px;
+            }
+    }
+    &__element {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-between;
+        background-color: #fff;
+        height: 4rem;
+        margin-top: 1rem;
+        padding: 0 0 0 0.7rem;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 15px 2px #d9d9d9;
+        cursor: pointer;
+        overflow: hidden;
+        opacity: 0;
+        &--dish {
+            max-width: 80%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &--title {
+            margin-top: 0.5rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        &--informations {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -2rem;
+                         
+                &--plus {
+                    margin-top: -0.7rem;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 300;
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                }
+                &__price {
+                    color: #353535;
+                    font-weight: bold;
+                    font-size: 14px;
+                }       
+            }
+        }
+    }
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+.menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 800px) {
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 1rem;
+    }
+}
+@media (min-width: 1100px) {
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.element01 {
+    animation: show 200ms forwards;
+}
+.element02 {
+    animation: show 1s forwards;
+    animation-delay: 400ms;
+}
+.element03 {
+    animation: show 1s forwards;
+    animation-delay: 600ms;
+}
+.element04 {
+    animation: show 1s forwards;
+    animation-delay: 800ms;
+}
+.element05 {
+    animation: show 1s forwards;
+    animation-delay: 1s;
+}
+.element06 {
+    animation: show 1s forwards;
+    animation-delay: 1.2s;
+}
+.element07 {
+    animation: show 1s forwards;
+    animation-delay: 1.4s;
+}
+.element08 {
+    animation: show 1s forwards;
+    animation-delay: 1.6s;
+}
+.element09 {
+    animation: show 1s forwards;
+    animation-delay: 1.8s;
+}
+.element10 {
+    animation: show 1s forwards;
+    animation-delay: 2s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} 
+
+@media (min-width: 1440px) {
+    .food-menu-section {
+        width: 1440px;
+        margin: auto;
+    }
+}
+.order-button {
+    display: flex;
+    justify-content: center;
+}
+            
+
+
+
+
+
+
+
+.anim {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    background-color: $tertiary-color;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+    transition: width 1s;
+    
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    color: $tertiary-color;
+    background-color: white;
+    transition: transform 1s ease;
+}
+.food-menu__element:hover .anim {
+    width: 15%;
+}
+.food-menu__element:hover .anim .circle{
+    animation: rotate 1s forwards;
+}
+@keyframes rotate {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        transform: rotate(360deg);
+        visibility: visible
+    
+    }
+}
+/*
+
+.test:hover .anim .square{
+    animation: spin 1s forwards;
+}
+@keyframes spin {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        transform: rotate(360deg);
+        visibility: visible
+    
+    }
+}
+.test .anim .square {
+    animation: notspin 2s forwards;
+}
+@keyframes notspin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0);  
+    }
+}*/
