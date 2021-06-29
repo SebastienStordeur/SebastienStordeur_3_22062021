@@ -72,53 +72,79 @@
         overflow: hidden;
         opacity: 0;
         &--dish {
+            display: flex;
+            flex-direction: column;
             max-width: 80%;
             white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden;
-        }
+            }
         &--title {
-            margin-top: 0.5rem;
             font-family: "Roboto", sans-serif;
             font-weight: 500;
-            font-size: 18px;
-        }
-        
-        &--informations {
+            font-size: 16px;
+            }        
+        &--plus {
+            margin-top: -0.7rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            }
+        &--price {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: -2rem;
-                         
-                &--plus {
-                    margin-top: -0.7rem;
-                    font-family: "Roboto", sans-serif;
-                    font-weight: 300;
-                    font-size: 14px;
-                    text-overflow: ellipsis;
+            align-items: center;
+            color: #353535;
+            margin-left: auto;
+            margin-right: 0.5rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            }       
+        &--anim {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 0;
+                height: 100%;
+                background-color: $tertiary-color;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                overflow: hidden;
+                transition: width 1s;
+                &__circle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 2rem;
+                    color: $tertiary-color;
+                    background-color: white;
+                    transition: transform 1s ease;
                 }
-                &__price {
-                    color: #353535;
-                    font-weight: bold;
-                    font-size: 14px;
-                }       
+            }
+        &:hover .food-menu__element--anim {
+            width: 15%;
+            }
+        &:hover .food-menu__element--anim .food-menu__element--anim__circle {
+            animation: rotate 1s forwards;
             }
         }
     }
 }
-
-.price-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 1rem;
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .menu-container {
     display: flex;
     flex-direction: column;
 }
-
 @media (min-width: 800px) {
     .menu-container {
         display: grid;
@@ -182,7 +208,6 @@
         transform: translateY(0px);
     }
 } 
-
 @media (min-width: 1440px) {
     .food-menu-section {
         width: 1440px;
@@ -196,76 +221,3 @@
             
 
 
-
-
-
-
-
-.anim {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 0;
-    height: 100%;
-    background-color: $tertiary-color;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    overflow: hidden;
-    transition: width 1s;
-    
-}
-
-.circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
-    color: $tertiary-color;
-    background-color: white;
-    transition: transform 1s ease;
-}
-.food-menu__element:hover .anim {
-    width: 15%;
-}
-.food-menu__element:hover .anim .circle{
-    animation: rotate 1s forwards;
-}
-@keyframes rotate {
-    0% {
-        visibility: hidden;
-    }
-    100% {
-        transform: rotate(360deg);
-        visibility: visible
-    
-    }
-}
-/*
-
-.test:hover .anim .square{
-    animation: spin 1s forwards;
-}
-@keyframes spin {
-    0% {
-        visibility: hidden;
-    }
-    100% {
-        transform: rotate(360deg);
-        visibility: visible
-    
-    }
-}
-.test .anim .square {
-    animation: notspin 2s forwards;
-}
-@keyframes notspin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0);  
-    }
-}*/
