@@ -409,7 +409,7 @@ li {
 .food-menu-section .food-menu__element--dish {
   display: flex;
   flex-direction: column;
-  width: calc(80%);
+  width: calc(85%);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
