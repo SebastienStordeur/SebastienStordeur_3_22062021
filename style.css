@@ -622,7 +622,6 @@ li {
   transition: all 500ms ease-in-out;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   font-weight: 900;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
