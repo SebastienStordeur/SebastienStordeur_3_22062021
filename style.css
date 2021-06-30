@@ -612,46 +612,17 @@ li {
     transform: rotate(360deg);
   }
 }
-.full-heart {
-  position: absolute;
-  opacity: 0;
+.fa-heart {
+  cursor: pointer;
 }
 
-.full-heart:before {
-  color: transparent;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+.fa-heart:hover:before {
+  transition: all 500ms ease-in-out;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
-}
-
-.empty-heart {
-  position: absolute;
-  opacity: 1;
-}
-
-.heart-wrapper:hover .empty-heart {
-  animation: fade 1s both;
-}
-
-.heart-wrapper:hover .full-heart {
-  animation: appear 1s both;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
