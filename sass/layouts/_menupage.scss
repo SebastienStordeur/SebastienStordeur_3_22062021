@@ -74,25 +74,30 @@
         &--dish {
             display: flex;
             flex-direction: column;
-            max-width: 80%;
+            width: calc(80%);
             white-space: nowrap;
             text-overflow: ellipsis;
+            overflow: hidden;
             }
         &--title {
             font-family: "Roboto", sans-serif;
             font-weight: 500;
             font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
             }        
         &--plus {
             margin-top: -0.7rem;
             font-family: "Roboto", sans-serif;
             font-weight: 300;
             font-size: 14px;
+            overflow: hidden;
             text-overflow: ellipsis;
             }
         &--price {
             display: flex;
             align-items: center;
+            width: 2rem;
             color: #353535;
             margin-left: auto;
             margin-right: 0.5rem;
@@ -125,7 +130,7 @@
                 }
             }
         &:hover .food-menu__element--anim {
-            width: 15%;
+            width: 20%;
             }
         &:hover .food-menu__element--anim .food-menu__element--anim__circle {
             animation: rotate 1s forwards;
