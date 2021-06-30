@@ -98,6 +98,7 @@ a {
   border-radius: 1rem;
   font-family: "Roboto", sans-serif;
   box-shadow: 3px 3px 15px 2px #d9d9d9;
+  transition: background-color 1s ease;
 }
 .working-section__step .number-wrapper {
   display: flex;
@@ -109,11 +110,12 @@ a {
   height: 1.5rem;
   color: #fff;
   background-color: #9356DC;
-  border-radius: 1rem;
+  border-radius: 50%;
 }
 .working-section__step .fas {
   margin-right: 14rem;
   color: #7E7E7E;
+  transition: color 1s ease;
 }
 .working-section__step .action {
   position: absolute;

@@ -22,7 +22,8 @@
             margin: 1rem;
             border-radius: 1rem;
             font-family: "Roboto", sans-serif;
-            box-shadow: 3px 3px 15px 2px #d9d9d9;     
+            box-shadow: 3px 3px 15px 2px #d9d9d9;
+            transition: background-color 1s ease;   
                 .number-wrapper {
                     display: flex;
                     align-items: center;
@@ -33,13 +34,12 @@
                     height: 1.5rem;               
                     color: #fff;
                     background-color: $primary-color;                   
-                    border-radius: 1rem;
-                   
-                    
+                    border-radius: 50%;
                 }
                 .fas {
                     margin-right: 14rem;
                     color: #7E7E7E;
+                    transition: color 1s ease;
                 }
                 .action {
                     position: absolute;
@@ -50,6 +50,7 @@
             background-color: #F5EDFF;
             cursor: pointer;
                 .fas {
+                    
                     color: $primary-color;
                 }
         }
