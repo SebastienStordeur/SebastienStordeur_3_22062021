@@ -254,10 +254,11 @@ a {
   font-size: 16px;
   cursor: pointer;
   box-shadow: 3px 3px 15px 2px #C5C5C5;
+  transition: filter 1s ease;
 }
 
 .explore-btn:hover {
-  background: linear-gradient(to top, #9356DC, #FF79DA), #d7c0f2, lightnen(#FF79DA, 25%);
+  filter: brightness(120%);
 }
 
 .order-btn {
@@ -275,6 +276,11 @@ a {
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 3px 3px 15px 2px #d9d9d9;
+  transition: filter 1s ease;
+}
+
+.order-btn:hover {
+  filter: brightness(120%);
 }
 
 .footer {
