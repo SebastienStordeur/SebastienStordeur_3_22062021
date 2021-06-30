@@ -104,8 +104,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  margin-right: 20.5rem;
+  position: relative;
+  margin-left: -0.8rem;
+  margin-right: auto;
   width: 1.5rem;
   height: 1.5rem;
   color: #fff;
@@ -113,13 +114,16 @@ a {
   border-radius: 50%;
 }
 .working-section__step .fas {
-  margin-right: 14rem;
+  position: relative;
+  margin-left: -15rem;
+  margin-right: auto;
   color: #7E7E7E;
   transition: color 1s ease;
 }
 .working-section__step .action {
   position: absolute;
   font-weight: 500;
+  font-size: 14px;
 }
 .working-section__step:hover {
   background-color: #F5EDFF;
@@ -133,6 +137,22 @@ a {
   .working-section {
     width: 1440px;
     margin: auto;
+  }
+}
+@media (min-width: 1100px) {
+  .working-section__step .fas {
+    margin-left: -15rem;
+  }
+  .working-section__step .action {
+    font-size: 16px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1099px) {
+  .working-section__step .fas {
+    margin-left: -11.5rem;
+  }
+  .working-section__step .action {
+    font-size: 14px;
   }
 }
 @media (min-width: 800px) {

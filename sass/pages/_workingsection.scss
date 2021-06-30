@@ -28,8 +28,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    position: absolute;
-                    margin-right: 20.5rem;
+                    position: relative;
+                    margin-left: -0.8rem;
+                    margin-right: auto;
                     width: 1.5rem;
                     height: 1.5rem;               
                     color: #fff;
@@ -37,13 +38,16 @@
                     border-radius: 50%;
                 }
                 .fas {
-                    margin-right: 14rem;
+                    position: relative;
+                    margin-left: -15rem;
+                    margin-right: auto;
                     color: #7E7E7E;
                     transition: color 1s ease;
                 }
                 .action {
                     position: absolute;
                     font-weight: 500;
+                    font-size: 14px;
                 }
         }
         &__step:hover {
@@ -58,6 +62,30 @@
     .working-section {
         width: 1440px;
         margin: auto;
+    }
+}
+@media (min-width: 1100px) {
+    .working-section {
+        &__step {
+            .fas {
+                margin-left: -15rem;
+            }
+            .action {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (min-width: 800px) and (max-width: 1099px) {
+    .working-section {
+        &__step {
+            .fas {
+                margin-left: -11.5rem;
+            }
+            .action {
+                font-size: 14px;
+            }
+        }
     }
 }
 @media (min-width: 800px) {
