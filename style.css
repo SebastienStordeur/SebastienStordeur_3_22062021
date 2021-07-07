@@ -224,6 +224,10 @@ a {
   line-height: 4px;
 }
 
+.heart-wrapper {
+  margin-right: 1rem;
+}
+
 @media (min-width: 1440px) {
   .listing-section {
     max-width: 1440px;
@@ -634,16 +638,48 @@ li {
     transform: rotate(360deg);
   }
 }
-.fa-heart {
+.full-heart {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
 }
 
-.fa-heart:hover:before {
-  transition: all 500ms ease-in-out;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  font-weight: 900;
+.full-heart:before {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+.empty-heart {
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.heart-wrapper:hover .empty-heart {
+  animation: fade 1s both;
+}
+
+.heart-wrapper:hover .full-heart {
+  animation: appear 1s both;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
