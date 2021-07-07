@@ -8,7 +8,7 @@
 .full-heart:before {
     color: transparent;
     background-image: linear-gradient(to top, $primary-color, $secondary-color);
-    background-clip: text;
+    
     -webkit-background-clip: text;
 }
 .empty-heart {
